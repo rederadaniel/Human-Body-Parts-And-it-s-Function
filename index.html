@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Human Face | Performance Task #1</title>
+  <link rel="icon" href="glow.gif" type="image/gif" sizes="16x16">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="face-container">
+<img src="main face.jfif" alt="Main Face" class="main-face"/>
+  
+<!-- Parts -->
+
+<!-- Hair -->
+<div class="part hair" onclick="highlightPart(this); openRightPopup('Hair', 'hair.jpg', 'This is the hair, It keeps us warm by preserving heat.')">
+</div>
+
+<!-- Right Eye -->
+<div class="part left-eye" onclick="highlightPart(this); openRightPopup('Right Eye', 'right eye.jfif', 'This is the right eye that captures light and transmits signals to the brain.'); triggerBlink('right')">
+</div>
+
+<!-- Left Eye -->
+<div class="part right-eye" onclick="highlightPart(this); openLeftPopup('Left Eye', 'left eye.jpg', 'This is the left eye that allows us to perceive the world around us.'); triggerBlink('left')">
+</div>
+
+<!-- Nose -->
+<div class="part nose" onclick="highlightPart(this); openLeftPopup('Nose', 'nose.jfif', 'This is the nose that performs many functions, including breathing, smelling, and filtering the air.')">
+</div>
+
+<!-- Left Eye Brow -->
+<div class="part right-eye-brow" onclick="highlightPart(this); openLeftPopup('Left Eye Brow', 'left eye brow.webp', 'This is the left eyebrow, stress is one of the main contributors to a twitching eyebrow.')">
+</div>
+
+<!-- Right Eye Brow -->
+<div class="part left-eye-brow" onclick="highlightPart(this); openRightPopup('Right Eye Brow', 'right eye brow.jfif', 'This is the right eyebrow, it assesses and potentially treats functional vision issues.')">
+</div>
+
+<!-- Mouth -->
+<div class="part mouth" onclick="highlightPart(this); openRightPopup('Mouth', 'mouth.jpg', 'This is the mouth, it helps you with daily functions like eating, speaking, and breathing.')">
+</div>
+
+<!-- Beard Sections -->
+<div class="part beard" onclick="highlightPart(this); openLeftPopup('Beard', 'beard.avif', 'This is the beard that provides protection and aesthetics.')">
+</div>
+<div class="part beard-1" onclick="highlightPart(this); openLeftPopup('Beard', 'beard.avif', 'This is the beard that provides protection and aesthetics.')">
+</div>
+<div class="part beard-2" onclick="highlightPart(this); openLeftPopup('Beard', 'beard.avif', 'This is the beard that provides protection and aesthetics.')">
+</div>
+<div class="part beard-3" onclick="highlightPart(this); openLeftPopup('Beard', 'beard.avif', 'This is the beard that provides protection and aesthetics.')">
+</div>
+
+<!-- Right Ear -->
+<div class="part left-ear" onclick="highlightPart(this); openRightPopup('Right Ear', 'right ear.jfif', 'This is the right ear, where speech sounds are processed and recognized more quickly.')">
+</div>
+
+<!-- Left Ear -->
+<div class="part right-ear" onclick="highlightPart(this); openLeftPopup('Left Ear', 'left ear.jfif', 'This is the left ear, which is more tuned to music, emotion, and intuition.')">
+</div>
+</div>
+
+<!-- Popup Container -->
+<div class="popup" id="popup">
+</div>
+
+<!-- Right Eye Popup -->
+<div class="popup" id="right-popup">
+    <img id="right-popup-img" src="" alt="Right Eye" onclick="changeImage()"/>
+    <h1 style="color:#722d8d" id="right-popup-title"></h1>
+    <p style="color:#8d7397" id="right-popup-desc"></p>
+  </div>
+  
+  <!-- Left Eye Popup -->
+  <div class="popup" id="left-popup">
+    <img id="left-popup-img" src="" alt="Left Eye" onclick="changeImage()"/>
+    <h1 style="color:#722d8d" id="left-popup-title"></h1>
+    <p style="color:#8d7397" id="left-popup-desc"></p>
+  </div>
+
+<div class="overlay" id="overlay" onclick="removeHighlight()"></div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
